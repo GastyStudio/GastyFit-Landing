@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZonaFit - Desarrollo Web para Fitness</title>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Header con logo -->
+    <header>
+        <div class="logo">
+            <img src="/images/logo.png" alt="Logo ZonaFit" class="logo-image">
+            <i class="fas fa-dumbbell"></i>
+            Zona<span class="fit">Fit</span>
+            <span class="slogan">fitness & web</span>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Desarrollo Web <span class="highlight">para el Mundo Fitness</span></h1>
+            <p>Como desarrollador web y personal trainer, creo soluciones digitales que entienden tu negocio desde adentro. Páginas web y aplicaciones diseñadas por alguien que vive el fitness.</p>
+            <a href="#contact" class="cta-button">Impulsa tu Negocio</a>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="services">
+        <h2 class="section-title">Servicios Especializados</h2>
+        <p class="section-subtitle">Soluciones web , Marketing o Branding diseñadas específicamente para tu tipo de negocio</p>
+        
+        <div class="services-grid">
+            <!-- Servicio para Personal Trainers -->
+            <div class="service-card">
+                <img src="/images/Personal-trainner-a-bordo.jpg" alt="Personal Trainer" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Personal Trainers</h3>
+                    <p>Web personal con sistema de reservas, planes de entrenamiento online, gestión de clientes y pasarela de pagos. Todo lo que necesitas para profesionalizar tu servicio.</p>
+                </div>
+            </div>
+
+            <!-- Servicio para Gimnasios -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Gimnasio" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Gimnasios</h3>
+                    <p>Plataforma completa con horarios de clases, inscripciones online,membresías digitales y área de miembros personalizada.</p>
+                </div>
+            </div>
+
+            <!-- Servicio para CrossFit -->
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&q=80" alt="CrossFit" class="service-image">
+                <div class="service-content">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Box de CrossFit</h3>
+                    <p>Sistema de WODs diarios, ranking de atletas, registro de PRs, calendario de competencias y comunidad online para tu box.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ventajas -->
+    <section class="advantages">
+        <div class="advantages-content">
+            <h2 class="section-title">¿Por Qué Elegir ZonaFit?</h2>
+            <p class="section-subtitle">La diferencia está en la experiencia real</p>
+            
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Conozco Tu Mundo</h4>
+                    <p>Como personal trainer, entiendo tus necesidades reales sin necesidad de largas explicaciones.</p>
+                </div>
+
+                <div class="advantage-item">
+                    <i class="fas fa-code"></i>
+                    <h4>Desarrollo Profesional</h4>
+                    <p>Tecnología moderna y funcional que hace crecer tu negocio desde el primer día.</p>
+                </div>
+
+                <div class="advantage-item">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Resultados Rápidos</h4>
+                    <p>Sé exactamente qué necesitas, lo que acelera el proceso de desarrollo y lanzamiento.</p>
+                </div>
+
+                <div class="advantage-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>100% Responsive</h4>
+                    <p>Tus clientes podrán acceder desde cualquier dispositivo sin problemas.</p>
+                </div>
+
+                <!-- Card especial sobre mí -->
+                <div class="advantage-item about-me-card">
+                    <img src="/images/mifoto.jpg" alt="Gaston Coria" class="service-image">
+                    <h4>Gaston Coria</h4>
+                <p>Soy instructor de musculación con experiencia en ayudar a transformar cuerpos y mejorar la calidad de vida de las personas. Desde hace 2 años también me dedico al desarrollo web y móvil. Además, cuento con conocimientos en marketing digital y creación de contenido, lo que me permite ayudar a otros profesionales del mundo del deporte a potenciar sus negocios online. Combino mi pasión por el fitness y la tecnología para crear soluciones digitales que realmente funcionan.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+   <section class="contact" id="contact">
+        <h2 class="section-title">Hablemos de Tu Proyecto</h2>
+        <p class="section-subtitle">Contame qué necesitas y lo hacemos realidad 💪</p>
+        
+        <div class="contact-container">
+            <!-- Formulario con FormSubmit -->
+            <form action="https://formsubmit.co/gastoncoria53@gmail.com" method="POST" id="contactForm">
+                <!-- Configuración de FormSubmit -->
+                <input type="hidden" name="_subject" value="Nuevo contacto desde ZonaFit!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+                
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+         <div class="footer-content">
+            <div class="logo">
+                <i class="fas fa-dumbbell"></i>
+                Zona<span class="fit">Fit</span>
+            </div>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">fitness & web</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">Desarrollo Web especializado en Fitness</p>
+
+            <div class="footer-stats">
+                <div class="stat-item">
+                    <span class="stat-number">2+</span>
+                    <span class="stat-label">Años Experiencia</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Proyectos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Satisfacción</span>
+                </div>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4><i class="fas fa-dumbbell"></i> Servicios</h4>
+                    <a href="#services">Desarrollo Web</a>
+                    <a href="#services">Apps Móviles</a>
+                    <a href="#services">Consultoría Fitness</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-users"></i> Para Quién</h4>
+                    <a href="#services">Personal Trainers</a>
+                    <a href="#services">Gimnasios</a>
+                    <a href="#services">Box de CrossFit</a>
+                    <a href="#services">Coaches</a>
+                </div>
+
+                <div class="footer-section">
+                    <h4><i class="fas fa-envelope"></i> Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Lanús, Buenos Aires, AR</p>
+                    <p><i class="fas fa-phone"></i> +54 9 11 6424-6726</p>
+                    <p><i class="fas fa-clock"></i> Lun - Sab: 9:00 - 18:00</p>
+                </div>
+            </div>
+        <!-- Redes sociales con iconos específicos -->
+        <div class="social-links">
+            <a href="https://instagram.com/tuusuario" target="_blank" aria-label="Instagram" class="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/tuusuario" target="_blank" aria-label="Facebook" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://linkedin.com/in/tuusuario" target="_blank" aria-label="LinkedIn" class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.6;">
+            © 2025 ZonaFit. Todos los derechos reservados.
+        </p>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp con API -->
+    <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20tus%20servicios%20de%20desarrollo%20web%20para%20fitness" >
+        <div class="whatsapp-icon">
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.6;"> Hablame para ayudarte </p>
+        </div>
+        <div class="whatsapp-float" 
+       target="_blank" 
+       aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript externo -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
