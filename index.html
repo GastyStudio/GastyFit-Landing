@@ -1,234 +1,833 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZonaFit - Desarrollo Web para Fitness</title>
-    
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- SEO Primary -->
+    <title>GastyFit Dev | Apps y Webs para Gimnasios en Lanús, Banfield y Escalada</title>
+    <meta name="description"
+        content="Soy programador y personal trainer del barrio. Hago apps y sitios web para gimnasios, boxes de CrossFit y trainers en Lanús, Banfield y Escalada. Gestión de cuotas, reserva de cupos y ventas por WhatsApp, sin bolonqui.">
+    <meta name="keywords"
+        content="desarrollo web gimnasios Lanús, apps CrossFit Banfield, programador personal trainer Escalada, PWA fitness Argentina, web gimnasio Remedios de Escalada, app gestión gym">
+    <meta name="author" content="Gaston Coria - GastyFit Dev">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="GastyFit Dev | Apps para Gimnasios en Lanús y Banfield">
+    <meta property="og:description"
+        content="El único dev del barrio que también levanta fierros. Apps y webs hechas a medida para gimnasios, CrossFit y trainers del sur del GBA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gastyfit.vercel.app/">
+    <meta property="og:image" content="./images/gastyfit.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/gastyfit.png">
+    <link rel="apple-touch-icon" href="./images/gastyfit.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
-    <!-- Header con logo -->
-    <header>
-        <div class="logo">
-            <img src="/images/logo.png" alt="Logo ZonaFit" class="logo-image">
-            <i class="fas fa-dumbbell"></i>
-            Zona<span class="fit">Fit</span>
-            <span class="slogan">fitness & web</span>
+
+    <!-- ===== SPLASH SCREEN INTRO ===== -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-inner">
+            <div class="splash-logo-wrap">
+                <img src="./images/gastyfit.png" alt="GastyFit Dev" class="splash-logo" id="splashLogo">
+                <div class="splash-ring splash-ring--1"></div>
+                <div class="splash-ring splash-ring--2"></div>
+            </div>
+            <p class="splash-tagline" id="splashTagline">Entiendo los fierros. Y también el código.</p>
+            <div class="splash-bar" id="splashBar">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <header id="navbar" class="navbar">
+        <div class="navbar-inner">
+            <a href="#hero" class="nav-logo" id="nav-logo-link">
+                <img src="./images/gastyfit.png" alt="GastyFit Dev Logo" class="nav-logo-img">
+                <span class="nav-logo-text">Gasty<span class="accent">Fit</span> <span
+                        class="nav-logo-dev">Dev</span></span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#casos" class="nav-link">Proyectos</a>
+                <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+                <a href="#contacto" class="nav-link nav-link-cta" id="nav-cta-btn">Auditoría Gratis</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Sección Hero -->
-    <section class="hero">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-noise"></div>
+
+        <!-- Floating badges -->
+        <div class="hero-badge hero-badge--left" aria-hidden="true">
+            <i class="fas fa-dumbbell"></i> 8+ años en los fierros
+        </div>
+        <div class="hero-badge hero-badge--right" aria-hidden="true">
+            <i class="fas fa-code"></i> React / Next.js / PWA
+        </div>
+
         <div class="hero-content">
-            <h1>Desarrollo Web <span class="highlight">para el Mundo Fitness</span></h1>
-            <p>Como desarrollador web y personal trainer, creo soluciones digitales que entienden tu negocio desde adentro. Páginas web y aplicaciones diseñadas por alguien que vive el fitness.</p>
-            <a href="#contact" class="cta-button">Impulsa tu Negocio</a>
+            <!-- Eyebrow -->
+            <p class="hero-eyebrow">
+                <span class="eyebrow-dot"></span>
+                Lanús · Escalada · Banfield · Lomas de Zamora
+                <span class="eyebrow-dot"></span>
+            </p>
+
+            <!-- Headline principal -->
+            <h1 class="hero-title" id="hero-title">
+                Entiendo los<br>
+                <span class="title-gradient">fierros.</span>
+                <span class="title-and"> Y también</span><br>
+                <span class="title-code">el código.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Soy <strong>programador y personal trainer del barrio</strong>. Hago apps y webs hechas a medida
+                para gimnasios, boxes y trainers. Sin vueltas, sin plantillas, sin venderte humo.
+                Si tiene que ver con fitness y tecnología, lo entiendo desde adentro.
+            </p>
+
+            <div class="hero-ctas">
+                <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola%20Gaston!%20Quiero%20pedir%20una%20auditor%C3%ADa%20gratis%20para%20mi%20negocio%20fitness."
+                    target="_blank" class="btn btn-primary" id="hero-cta-auditoria">
+                    <i class="fab fa-whatsapp"></i> Pedir Auditoría Gratis
+                </a>
+                <a href="#casos" class="btn btn-ghost" id="hero-cta-proyectos">
+                    Ver mis proyectos <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Social proof mini -->
+            <div class="hero-proof">
+                <div class="proof-avatars" aria-hidden="true">
+                    <div class="proof-avatar" style="background: #ff6b35;">G</div>
+                    <div class="proof-avatar" style="background: #4ade80;">C</div>
+                    <div class="proof-avatar" style="background: #a78bfa;">F</div>
+                </div>
+                <p class="proof-text">+3 negocios del sur del GBA ya le sacaron el clavo digital</p>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- Sección de Servicios -->
-    <section class="services">
-        <h2 class="section-title">Servicios Especializados</h2>
-        <p class="section-subtitle">Soluciones web , Marketing o Branding diseñadas específicamente para tu tipo de negocio</p>
-        
-        <div class="services-grid">
-            <!-- Servicio para Personal Trainers -->
-            <div class="service-card">
-                <img src="/images/Personal-trainner-a-bordo.jpg" alt="Personal Trainer" class="service-image">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <i class="fas fa-user-tie"></i>
+    <!-- ===== PAIN POINTS STRIP ===== -->
+    <section class="pain-strip" aria-label="Problemas comunes de los gimnasios">
+        <div class="pain-strip-inner">
+            <div class="pain-item">
+                <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+                <span>¿Seguís persiguiendo socios para que paguen la cuota?</span>
+            </div>
+            <div class="pain-divider" aria-hidden="true">✦</div>
+            <div class="pain-item">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <span>¿Gestionás los cupos del box por WhatsApp a mano?</span>
+            </div>
+            <div class="pain-divider" aria-hidden="true">✦</div>
+            <div class="pain-item">
+                <i class="fas fa-comment-slash" aria-hidden="true"></i>
+                <span>¿Perdés alumnos porque no respondés al toque?</span>
+            </div>
+            <div class="pain-divider" aria-hidden="true">✦</div>
+            <div class="pain-item">
+                <i class="fas fa-trophy" aria-hidden="true"></i>
+                <span>¿Tus atletas no saben dónde están parados en el ranking?</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Lo que hago</span>
+                <h2 class="section-title">Hecho a medida,<br><span class="accent">no a la carta</span></h2>
+                <p class="section-subtitle">No vendo plantillas de internet. Cada proyecto arranca desde el dolor real
+                    de tu negocio, porque yo ese dolor lo conozco de adentro.</p>
+            </div>
+
+            <div class="services-grid" id="services-grid">
+
+                <!-- Card 1: Gimnasios -->
+                <article class="service-card" id="service-gimnasios">
+                    <div class="service-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&q=80"
+                            alt="Gimnasio moderno en Lanús" class="service-card-image" loading="lazy">
+                        <div class="service-card-badge">Más popular</div>
                     </div>
-                    <h3>Personal Trainers</h3>
-                    <p>Web personal con sistema de reservas, planes de entrenamiento online, gestión de clientes y pasarela de pagos. Todo lo que necesitas para profesionalizar tu servicio.</p>
-                </div>
-            </div>
-
-            <!-- Servicio para Gimnasios -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Gimnasio" class="service-image">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <i class="fas fa-dumbbell"></i>
+                    <div class="service-card-body">
+                        <div class="service-icon-wrap service-icon-wrap--orange">
+                            <i class="fas fa-dumbbell" aria-hidden="true"></i>
+                        </div>
+                        <h3>Gimnasios de Musculación</h3>
+                        <p class="service-problem">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                            <em>El clavo:</em> Pasás más tiempo persiguiendo socios para que paguen la cuota que
+                            entrenando. Los vencimientos se te pasan, el bolsillo se resiente y vos tenés que hacer de
+                            cobrador.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Cobro automático de cuotas con aviso por WhatsApp.
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Control de membresías y vencimientos sin hacer nada.
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> El socio renueva solo, vos solo mirás el panel.</li>
+                            <li><i class="fas fa-check-circle"></i> Alertas automáticas antes de que venza la cuota.
+                            </li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola%20Gaston!%20Me%20interesa%20una%20web%20para%20mi%20gimnasio."
+                            target="_blank" class="service-cta" id="cta-gimnasio">
+                            Dejar de perseguir socios. <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <h3>Gimnasios</h3>
-                    <p>Plataforma completa con horarios de clases, inscripciones online,membresías digitales y área de miembros personalizada.</p>
-                </div>
-            </div>
+                </article>
 
-            <!-- Servicio para CrossFit -->
-            <div class="service-card">
-                <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&q=80" alt="CrossFit" class="service-image">
-                <div class="service-content">
-                    <div class="service-icon">
-                        <i class="fas fa-fire"></i>
+                <!-- Card 2: CrossFit -->
+                <article class="service-card" id="service-crossfit">
+                    <div class="service-card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=700&q=80"
+                            alt="Box CrossFit en Banfield" class="service-card-image" loading="lazy">
                     </div>
-                    <h3>Box de CrossFit</h3>
-                    <p>Sistema de WODs diarios, ranking de atletas, registro de PRs, calendario de competencias y comunidad online para tu box.</p>
+                    <div class="service-card-body">
+                        <div class="service-icon-wrap service-icon-wrap--red">
+                            <i class="fas fa-fire" aria-hidden="true"></i>
+                        </div>
+                        <h3>Boxes de CrossFit y Clases</h3>
+                        <p class="service-problem">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                            <em>El bolonqui:</em> Gestionás los cupos de cada turno por WhatsApp, la gente te confirma y
+                            después no aparece, y vos no sabés cuántos quedan libres hasta que ya es tarde.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Reserva de cupo online: el atleta anota su turno
+                                solo.</li>
+                            <li><i class="fas fa-check-circle"></i> Lista de espera automática si el turno se llena.
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Ranking de atletas con PRs y WODs del día.</li>
+                            <li><i class="fas fa-check-circle"></i> Confirmación automática por WhatsApp, sin vos en el
+                                medio.</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola%20Gaston!%20Quiero%20una%20app%20para%20mi%20box%20de%20CrossFit."
+                            target="_blank" class="service-cta" id="cta-crossfit">
+                            Terminar con el bolonqui de los cupos <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Card 3: Personal Trainers -->
+                <article class="service-card" id="service-trainers">
+                    <div class="service-card-image-wrap">
+                        <img src="/images/Personal-trainner-a-bordo.jpg" alt="Personal Trainer en Remedios de Escalada"
+                            class="service-card-image" loading="lazy">
+                    </div>
+                    <div class="service-card-body">
+                        <div class="service-icon-wrap service-icon-wrap--green">
+                            <i class="fas fa-user-tie" aria-hidden="true"></i>
+                        </div>
+                        <h3>Personal Trainers</h3>
+                        <p class="service-problem">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                            <em>La realidad:</em> Sos un capo entrenando, pero tu imagen digital no lo refleja. Mandás
+                            presupuestos por chat, los leads se enfrían y quedás como uno más del montón.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Web que te hace quedar como un profesional de verdad
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> El alumno reserva su sesión solo, vos no movés un
+                                dedo.</li>
+                            <li><i class="fas fa-check-circle"></i> Seguimiento y cobro automatizados por WhatsApp.</li>
+                            <li><i class="fas fa-check-circle"></i> Mercado Pago integrado, nada de perseguir
+                                transferencias.</li>
+                        </ul>
+                        <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola%20Gaston!%20Necesito%20una%20web%20como%20Personal%20Trainer."
+                            target="_blank" class="service-cta" id="cta-trainer">
+                            Dejar de parecer improvisado <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CASOS DE ÉXITO ===== -->
+    <section class="casos" id="casos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Proyectos reales</span>
+                <h2 class="section-title">Lo que armé<br><span class="accent">ya está andando</span></h2>
+                <p class="section-subtitle">No son figuritas ni demos. Son apps reales que desarrollé, están en
+                    producción y las usá gente de verdad.</p>
+            </div>
+
+            <div class="casos-grid">
+
+                <!-- Caso 1: Fútbol Fácil -->
+                <article class="caso-card caso-card--featured" id="caso-futbol">
+                    <div class="caso-card-content">
+                        <header class="caso-card-header">
+                            <div class="caso-tag caso-tag--green">PWA · Terminada ✅</div>
+                            <h3 class="caso-title">Fútbol Fácil</h3>
+                            <p class="caso-subtitle">La app que le pone orden al fútbol del domingo</p>
+                        </header>
+                        <p class="caso-description">
+                            ¿Cansado de los grupos de WhatsApp para organizar los partidos? Eso resuelve Fútbol
+                            Fácil. Una PWA (se baja como una app, sin pasar por ninguna tienda) donde creás el partido,
+                            balanceás equipos por habilidad y cargás los goles. Ranking de goleadores, MVPs votados y
+                            tabla de posiciones en tiempo real, todo desde la app.<br><br>
+                            <strong style="color: #ffd700;">Diferencial ⭐:</strong> Cada jugador arma su propia tarjeta
+                            estílo <em>FIFA / FC26</em> con su foto, posición y métricas. Una feature única que hace que
+                            todos quieran instalar la app.
+                        </p>
+                        <ul class="caso-tech">
+                            <li><i class="fab fa-react"></i> React</li>
+                            <li><i class="fas fa-database"></i> Supabase</li>
+                            <li><i class="fas fa-mobile-alt"></i> PWA</li>
+                            <li><i class="fas fa-bolt"></i> Real-time</li>
+                        </ul>
+                        <div class="caso-metrics">
+                            <div class="caso-metric">
+                                <span class="metric-number">100%</span>
+                                <span class="metric-label">Mobile-first</span>
+                            </div>
+                            <div class="caso-metric">
+                                <span class="metric-number">Real-time</span>
+                                <span class="metric-label">Ranking live</span>
+                            </div>
+                            <div class="caso-metric">
+                                <span class="metric-number">Cards</span>
+                                <span class="metric-label">estilo FIFA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caso-card-visual">
+                        <img src="./images/logo-futbol-facil.png" alt="Logo Fútbol Fácil" class="caso-app-logo">
+                        <div class="caso-mockup caso-mockup--futbol" aria-hidden="true">
+                            <div class="mockup-phone">
+                                <div class="mockup-screen">
+                                    <div class="mockup-header-bar" style="background:#22c55e;">
+                                        <span>⚽ Fútbol Fácil</span>
+                                        <span class="mockup-dot live-dot">● LIVE</span>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <div class="mockup-match-info">
+                                            <div class="mockup-team" style="background:rgba(34,197,94,0.15);">
+                                                <span class="mockup-team-name">La Yaya FC</span>
+                                                <span class="mockup-score">3</span>
+                                            </div>
+                                            <span class="mockup-vs">vs</span>
+                                            <div class="mockup-team" style="background:rgba(239,68,68,0.15);">
+                                                <span class="mockup-team-name">Los Pibes FC</span>
+                                                <span class="mockup-score">2</span>
+                                            </div>
+                                        </div>
+                                        <!-- FIFA-style card -->
+                                        <div class="mockup-fifa-card">
+                                            <div class="mockup-fifa-avatar">👤</div>
+                                            <div class="mockup-fifa-info">
+                                                <span class="mockup-fifa-name">RODRIGO G.</span>
+                                                <span class="mockup-fifa-pos">Delantero · ARG</span>
+                                                <span class="mockup-fifa-stars">★★★★☆</span>
+                                            </div>
+                                            <span class="mockup-fifa-rating">87</span>
+                                        </div>
+                                        <div class="mockup-ranking">
+                                            <p class="mockup-label">🏆 Ranking</p>
+                                            <div class="mockup-rank-item rank-1"><span>#1 Rodrigo G.</span><span>12
+                                                    pts</span></div>
+                                            <div class="mockup-rank-item rank-2"><span>#2 Maxi R.</span><span>9
+                                                    pts</span></div>
+                                            <div class="mockup-rank-item rank-3"><span>#3 Lucas P.</span><span>7
+                                                    pts</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Caso 2: Bio Hacker -->
+                <article class="caso-card" id="caso-biohacking">
+                    <div class="caso-card-content">
+                        <header class="caso-card-header">
+                            <div class="caso-tag caso-tag--purple">Full-Stack · En desarrollo</div>
+                            <h3 class="caso-title">Bio Hacker</h3>
+                            <p class="caso-subtitle">Tu motor de nutrición inteligente en tiempo real</p>
+                        </header>
+                        <p class="caso-description">
+                            Junté lo que sé del entrenamiento con Python para resolver algo concreto: ¿cuántos
+                            carbohidratos, sodio y cafeína necesitás exactamente <em>hoy</em>? La app calcula tus macros
+                            en base a tu peso, edad, objetivo, hora de entrenamiento e intensidad. Nada de
+                            tablas genéricas de Google: números personalizados para vos, en el momento justo.<br><br>
+                            <strong style="color: #ffd700;">Diferencial ⭐:</strong> No es una calculadora estática: es
+                            un
+                            motor que se adapta a vos. Si hoy entrenás fuerte, te da más energía. Si descansás, ajusta
+                            para no pasarte. Todo en una interfaz limpia, con gráficos y seguimiento en tiempo real.
+                        </p>
+                        <ul class="caso-tech">
+                            <li><i class="fab fa-react"></i> React</li>
+                            <li><i class="fab fa-python"></i> FastAPI</li>
+                            <li><i class="fas fa-calculator"></i> Macros Engine</li>
+                            <li><i class="fas fa-chart-line"></i> Analytics</li>
+                        </ul>
+                        <div class="caso-metrics">
+                            <div class="caso-metric">
+                                <span class="metric-number">3</span>
+                                <span class="metric-label">Macros clave</span>
+                            </div>
+                            <div class="caso-metric">
+                                <span class="metric-number">Real</span>
+                                <span class="metric-label">Personalizado</span>
+                            </div>
+                            <div class="caso-metric">
+                                <span class="metric-number">Full</span>
+                                <span class="metric-label">Stack propio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caso-card-visual">
+                        <img src="./images/logo-biohacker.png" alt="Logo Bio Hacker" class="caso-app-logo">
+                        <div class="caso-mockup caso-mockup--bio" aria-hidden="true">
+                            <div class="mockup-phone">
+                                <div class="mockup-screen" style="background:#0a0d1a;">
+                                    <div class="mockup-header-bar" style="background:#0891b2;">
+                                        <span> Bio Hacker</span>
+                                        <span class="mockup-dot" style="color:#22d3ee;">● Engine</span>
+                                    </div>
+                                    <div class="mockup-content">
+                                        <div class="mockup-bio-header-info">
+                                            <p>Hoy entrenás a las</p>
+                                            <strong>18:30 hs</strong>
+                                        </div>
+                                        <div class="mockup-macros">
+                                            <div class="macro-item">
+                                                <span>🌾 Carbs</span>
+                                                <div class="macro-bar" style="--w: 82%; --c: #22d3ee;">
+                                                    <div></div>
+                                                </div>
+                                                <span class="macro-value">310g</span>
+                                            </div>
+                                            <div class="macro-item">
+                                                <span>🧂 Sodio</span>
+                                                <div class="macro-bar" style="--w: 55%; --c: #a78bfa;">
+                                                    <div></div>
+                                                </div>
+                                                <span class="macro-value">1.4g</span>
+                                            </div>
+                                            <div class="macro-item">
+                                                <span>☕ Cafeína</span>
+                                                <div class="macro-bar" style="--w: 68%; --c: #f59e0b;">
+                                                    <div></div>
+                                                </div>
+                                                <span class="macro-value">220mg</span>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-bio-inputs">
+                                            <div class="mockup-bio-input-row">
+                                                <span>Peso</span><span>82 kg</span>
+                                            </div>
+                                            <div class="mockup-bio-input-row">
+                                                <span>Objetivo</span><span>Rendimiento</span>
+                                            </div>
+                                            <div class="mockup-bio-input-row">
+                                                <span>Edad</span><span>28 años</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- CTA bajo casos -->
+            <div class="casos-cta-wrap">
+                <p class="casos-cta-text">¿Tenés una idea pero no sabés por dónde arrancar?</p>
+                <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola%20Gaston!%20Vi%20tus%20proyectos%20y%20quiero%20hablar%20de%20mi%20idea."
+                    target="_blank" class="btn btn-primary" id="casos-cta-btn">
+                    <i class="fab fa-whatsapp"></i> Mandame un mensaje, charlamos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ / AUTORIDAD ===== -->
+    <section class="sobre-mi" id="sobre-mi">
+        <div class="container sobre-mi-grid">
+            <div class="sobre-mi-image-col">
+                <div class="sobre-mi-img-wrap">
+                    <img src="/images/mifoto.jpg" alt="Gaston Coria - Programador y Personal Trainer en Lanús"
+                        class="sobre-mi-photo" loading="lazy">
+                    <div class="sobre-mi-badge">
+                        <div class="badge-icon"><i class="fas fa-code"></i></div>
+                        <div class="badge-text">
+                            <span class="badge-title">Full-Stack Dev</span>
+                            <span class="badge-sub">React / Next.js / Python</span>
+                        </div>
+                    </div>
+                    <div class="sobre-mi-badge sobre-mi-badge--bottom">
+                        <div class="badge-icon badge-icon--green"><i class="fas fa-dumbbell"></i></div>
+                        <div class="badge-text">
+                            <span class="badge-title">Personal Trainer</span>
+                            <span class="badge-sub">8+ años de fierro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sobre-mi-content-col">
+                <span class="section-tag">¿Por qué yo?</span>
+                <h2 class="section-title section-title--left">El único dev<br><span class="accent">que también
+                        levanta</span>
+                </h2>
+                <p class="sobre-mi-text">
+                    Me llamo <strong>Gaston Coria</strong>, soy de <strong>Escalada</strong> y llevo más de 8 años
+                    moviendo
+                    fierros y soy instructor de musculación y personal trainer. Hace 2 años me metí de lleno en el
+                    desarrollo web y móvil, y hoy laburo con las dos cosas juntas.
+                </p>
+                <p class="sobre-mi-text">
+                    Cuando un dueño de gym me cuenta sus problemas, <strong>no tiene que explicarme nada</strong>. Yo ya
+                    estuve del otro lado: persiguiendo socios que no pagaban, coordinando cupos por WhatsApp a las 11 de
+                    la noche y viendo cómo los alumnos se iban por falta de seguimiento. Eso es exactamente lo que
+                    resuelvo con código.
+                </p>
+                <div class="ventajas-grid">
+                    <div class="ventaja-item">
+                        <div class="ventaja-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="ventaja-info">
+                            <strong>Soy del barrio</strong>
+                            <span>De Escalada. Si hace falta nos tomamos un café en Banfield o Escalada y
+                                charlamos.</span>
+                        </div>
+                    </div>
+                    <div class="ventaja-item">
+                        <div class="ventaja-icon"><i class="fas fa-brain"></i></div>
+                        <div class="ventaja-info">
+                            <strong>No necesitás explicarme nada</strong>
+                            <span>Dev + trainer = te entiendo al toque. Nada de reuniones eternas para que entienda tu
+                                negocio.</span>
+                        </div>
+                    </div>
+                    <div class="ventaja-item">
+                        <div class="ventaja-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="ventaja-info">
+                            <strong>Al toque y funcionando</strong>
+                            <span>Primera versión lista en 2 o 3 semanas. Sin hacerte esperar meses.</span>
+                        </div>
+                    </div>
+                    <div class="ventaja-item">
+                        <div class="ventaja-icon"><i class="fas fa-headset"></i></div>
+                        <div class="ventaja-info">
+                            <strong>No me borro después de entregar</strong>
+                            <span>Quedo disponible para cambios, mejoras y mantenimiento. No desaparezco.</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola%20Gaston!%20Quiero%20conocer%20m%C3%A1s%20sobre%20vos%20y%20tus%20servicios."
+                    target="_blank" class="btn btn-primary" id="sobre-cta-btn">
+                    <i class="fab fa-whatsapp"></i> Escribile a Gaston
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROCESO ===== -->
+    <section class="proceso" id="proceso">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">¿Cómo laburamos?</span>
+                <h2 class="section-title">De la idea a la app<br><span class="accent">en 4 pasos</span></h2>
+            </div>
+            <div class="proceso-steps">
+                <div class="proceso-step" id="proceso-step-1">
+                    <div class="paso-number">01</div>
+                    <div class="paso-icon"><i class="fas fa-comments"></i></div>
+                    <h4>Charla gratis, sin compromiso</h4>
+                    <p>Nos mandamos un mensaje o nos juntamos. Me contás cómo laburás hoy y yo te digo qué se puede
+                        mejorar y cuánto puede impactar. Sin vueltas.</p>
+                </div>
+                <div class="proceso-connector" aria-hidden="true"></div>
+                <div class="proceso-step" id="proceso-step-2">
+                    <div class="paso-number">02</div>
+                    <div class="paso-icon"><i class="fas fa-pencil-ruler"></i></div>
+                    <h4>Propuesta clara, sin letra chica</h4>
+                    <p>Te armo una propuesta con precio, tiempos y todo lo que vas a recibir. Sin sorpresas, sin costos
+                        ocultos, sin palabras raras.</p>
+                </div>
+                <div class="proceso-connector" aria-hidden="true"></div>
+                <div class="proceso-step" id="proceso-step-3">
+                    <div class="paso-number">03</div>
+                    <div class="paso-icon"><i class="fas fa-code"></i></div>
+                    <h4>Desarrollo con avances reales</h4>
+                    <p>Cada semana te muestro cómo va quedando. Podés pedir cambios sobre la marcha. No esperás meses
+                        para ver algo concreto.</p>
+                </div>
+                <div class="proceso-connector" aria-hidden="true"></div>
+                <div class="proceso-step" id="proceso-step-4">
+                    <div class="paso-number">04</div>
+                    <div class="paso-icon"><i class="fas fa-rocket"></i></div>
+                    <h4>Lanzamos y no te abandono</h4>
+                    <p>Publicamos todo, te enseño a manejarlo en media hora y quedo disponible por si algo falla o
+                        querés agregar algo. No desaparezco.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Ventajas -->
-    <section class="advantages">
-        <div class="advantages-content">
-            <h2 class="section-title">¿Por Qué Elegir ZonaFit?</h2>
-            <p class="section-subtitle">La diferencia está en la experiencia real</p>
-            
-            <div class="advantages-grid">
-                <div class="advantage-item">
-                    <i class="fas fa-heartbeat"></i>
-                    <h4>Conozco Tu Mundo</h4>
-                    <p>Como personal trainer, entiendo tus necesidades reales sin necesidad de largas explicaciones.</p>
-                </div>
+    <!-- ===== CONTACTO ===== -->
+    <section class="contacto" id="contacto">
+        <div class="container contacto-grid">
+            <div class="contacto-info">
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title section-title--left">¿Le entramos<br><span class="accent">a tu proyecto?</span>
+                </h2>
+                <p class="contacto-text">Mandame un mensajito o completá el formulario. Te respondo ese mismo día con
+                    una devolución honesta: si te puedo ayudar, cómo y cuánto. Sin rodeos.</p>
 
-                <div class="advantage-item">
-                    <i class="fas fa-code"></i>
-                    <h4>Desarrollo Profesional</h4>
-                    <p>Tecnología moderna y funcional que hace crecer tu negocio desde el primer día.</p>
+                <div class="contacto-cards">
+                    <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola%20Gaston!%20Quiero%20hablar%20sobre%20mi%20negocio%20fitness."
+                        target="_blank" class="contacto-card" id="contacto-whatsapp">
+                        <div class="contacto-card-icon" style="background: #25d366;">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <strong>WhatsApp directo</strong>
+                            <span>+54 9 11 6424-6726</span>
+                        </div>
+                        <i class="fas fa-external-link-alt contacto-card-arrow"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gastycoria.ok/" target="_blank" class="contacto-card"
+                        id="contacto-instagram">
+                        <div class="contacto-card-icon"
+                            style="background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div>
+                            <strong>Instagram</strong>
+                            <span>@gastycoria.ok</span>
+                        </div>
+                        <i class="fas fa-external-link-alt contacto-card-arrow"></i>
+                    </a>
+                    <div class="contacto-card contacto-card--static">
+                        <div class="contacto-card-icon" style="background: #1e40af;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <strong>Zona de cobertura</strong>
+                            <span>Lanús · Escalada · Banfield · Lomas de Zamora · Temperley · Adrogué · Turdera ·
+                            </span>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="advantage-item">
-                    <i class="fas fa-rocket"></i>
-                    <h4>Resultados Rápidos</h4>
-                    <p>Sé exactamente qué necesitas, lo que acelera el proceso de desarrollo y lanzamiento.</p>
-                </div>
+            <div class="contacto-form-wrap">
+                <form action="https://formsubmit.co/gastoncoria53@gmail.com" method="POST" id="contactForm"
+                    class="contacto-form">
+                    <!-- FormSubmit config -->
+                    <input type="hidden" name="_subject" value="️ Nuevo lead desde GastyFit Dev!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://gasty-fit-landing.vercel.app/?gracias=1">
+                    <input type="hidden" name="_autoresponse"
+                        value="¡Hola! Recibí tu mensaje. Te respondo a la brevedad. — Gaston de GastyFit Dev 💪">
+                    <input type="text" name="_honey" style="display:none">
 
-                <div class="advantage-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h4>100% Responsive</h4>
-                    <p>Tus clientes podrán acceder desde cualquier dispositivo sin problemas.</p>
-                </div>
+                    <h3 class="form-title">Pedí tu charla gratis 🤙</h3>
+                    <p class="form-subtitle">Sin compromiso · Te respondo ese mismo día</p>
 
-                <!-- Card especial sobre mí -->
-                <div class="advantage-item about-me-card">
-                    <img src="/images/mifoto.jpg" alt="Gaston Coria" class="service-image">
-                    <h4>Gaston Coria</h4>
-                <p>Soy instructor de musculación con experiencia en ayudar a transformar cuerpos y mejorar la calidad de vida de las personas. Desde hace 2 años también me dedico al desarrollo web y móvil. Además, cuento con conocimientos en marketing digital y creación de contenido, lo que me permite ayudar a otros profesionales del mundo del deporte a potenciar sus negocios online. Combino mi pasión por el fitness y la tecnología para crear soluciones digitales que realmente funcionan.</p>
+                    <div class="form-group" id="form-group-name">
+                        <label for="name">Tu nombre</label>
+                        <input type="text" id="name" name="name" required placeholder="Ej: Carlos García">
+                    </div>
 
-                </div>
+                    <div class="form-group" id="form-group-negocio">
+                        <label for="negocio">Tipo de negocio</label>
+                        <select id="negocio" name="negocio" required>
+                            <option value="" disabled selected>Seleccioná tu tipo de negocio</option>
+                            <option value="Gimnasio">Gimnasio</option>
+                            <option value="Box CrossFit">Box de CrossFit</option>
+                            <option value="Personal Trainer">Personal Trainer</option>
+                            <option value="Otro fitness">Otro (yoga, pilates, etc.)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="form-group-email">
+                        <label for="email">Tu WhatsApp o Email</label>
+                        <input type="text" id="email" name="contacto_preferido" required
+                            placeholder="Ej: 11-xxxx-xxxx o tu@email.com">
+                    </div>
+
+                    <div class="form-group" id="form-group-message">
+                        <label for="message">¿Cuál es el mayor dolor de tu negocio hoy?</label>
+                        <textarea id="message" name="message" required
+                            placeholder="Ej: Persigo socios para que paguen, gestiono los cupos por WhatsApp a mano, los leads se enfrían y no los retomo..."
+                            rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Mandar mensaje y charlar
+                    </button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
-   <section class="contact" id="contact">
-        <h2 class="section-title">Hablemos de Tu Proyecto</h2>
-        <p class="section-subtitle">Contame qué necesitas y lo hacemos realidad 💪</p>
-        
-        <div class="contact-container">
-            <!-- Formulario con FormSubmit -->
-            <form action="https://formsubmit.co/gastoncoria53@gmail.com" method="POST" id="contactForm">
-                <!-- Configuración de FormSubmit -->
-                <input type="hidden" name="_subject" value="Nuevo contacto desde ZonaFit!">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="text" name="_honey" style="display:none">
-                
-                <div class="form-group">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="./images/gastyfit.png" alt="GastyFit Dev" class="footer-logo-img">
+                        <span>Gasty<span class="accent">Fit</span> <span
+                                style="font-size:0.7em; opacity:0.7;">Dev</span></span>
+                    </div>
+                    <p class="footer-tagline">El único dev del barrio que también levanta fierros.</p>
+                    <p class="footer-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Lanús · Remedios de Escalada · Banfield · Lomas de Zamora · Temperley · Adrogué · Turdera ·
+                        Buenos Aires, AR
+                    </p>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                <div class="footer-links-group">
+                    <h4>Servicios</h4>
+                    <a href="#servicios">Webs para Gimnasios</a>
+                    <a href="#servicios">Apps para CrossFit</a>
+                    <a href="#servicios">Web para Trainers</a>
+                    <a href="#servicios">PWAs instalables</a>
                 </div>
 
-                <div class="form-group">
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                <div class="footer-links-group">
+                    <h4>Zona de cobertura</h4>
+                    <a href="#contacto">Lanús Este / Oeste</a>
+                    <a href="#contacto">Remedios de Escalada</a>
+                    <a href="#contacto">Banfield</a>
+                    <a href="#contacto">Lomas de Zamora</a>
+                    <a href="#contacto">Temperley</a>
+                    <a href="#contacto">Adrogué</a>
+                    <a href="#contacto">Turdera</a>
                 </div>
 
-                <button type="submit" class="submit-button">Enviar Mensaje</button>
-            </form>
+                <div class="footer-links-group">
+                    <h4>Conectar</h4>
+                    <a href="https://instagram.com/zonafit.25" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.tiktok.com/@gastycoria.ok?is_from_webapp=1&sender_device=pc" target="_blank"
+                        rel="noopener">TikTok</a>
+                    <a href="mailto:gastoncoria53@gmail.com">gastoncoria53@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="footer-stats-bar">
+                <div class="footer-stat">
+                    <span class="footer-stat-number">2+</span>
+                    <span class="footer-stat-label">Años de dev</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-number">6+</span>
+                    <span class="footer-stat-label">Años fitness</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-number">3+</span>
+                    <span class="footer-stat-label">Apps en producción</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-number">∞</span>
+                    <span class="footer-stat-label">Ganas de laburar</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-socials">
+                    <a href="https://instagram.com/zonafit.25" target="_blank" rel="noopener" aria-label="Instagram"
+                        class="footer-social instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/gasty.j.coria/" target="_blank" rel="noopener"
+                        aria-label="Facebook" class="footer-social facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=5491164246726" target="_blank" rel="noopener"
+                        aria-label="WhatsApp" class="footer-social whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <p class="footer-copy">© 2026 GastyFit Dev · Gaston Coria · Desarrollo Web para el Mundo Fitness · Hecho
+                    con
+                    fierros y cafe ☕
+                    Lanús,
+                    Buenos Aires</p>
+            </div>
         </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-         <div class="footer-content">
-            <div class="logo">
-                <i class="fas fa-dumbbell"></i>
-                Zona<span class="fit">Fit</span>
-            </div>
-            <p style="margin-top: 0.5rem; opacity: 0.8;">fitness & web</p>
-            <p style="margin-top: 0.5rem; opacity: 0.8;">Desarrollo Web especializado en Fitness</p>
-
-            <div class="footer-stats">
-                <div class="stat-item">
-                    <span class="stat-number">2+</span>
-                    <span class="stat-label">Años Experiencia</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Proyectos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-label">Satisfacción</span>
-                </div>
-            </div>
-
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4><i class="fas fa-dumbbell"></i> Servicios</h4>
-                    <a href="#services">Desarrollo Web</a>
-                    <a href="#services">Apps Móviles</a>
-                    <a href="#services">Consultoría Fitness</a>
-                </div>
-
-                <div class="footer-section">
-                    <h4><i class="fas fa-users"></i> Para Quién</h4>
-                    <a href="#services">Personal Trainers</a>
-                    <a href="#services">Gimnasios</a>
-                    <a href="#services">Box de CrossFit</a>
-                    <a href="#services">Coaches</a>
-                </div>
-
-                <div class="footer-section">
-                    <h4><i class="fas fa-envelope"></i> Contacto</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Lanús, Buenos Aires, AR</p>
-                    <p><i class="fas fa-phone"></i> +54 9 11 6424-6726</p>
-                    <p><i class="fas fa-clock"></i> Lun - Sab: 9:00 - 18:00</p>
-                </div>
-            </div>
-        <!-- Redes sociales con iconos específicos -->
-        <div class="social-links">
-            <a href="https://instagram.com/zonafit.25" target="_blank" aria-label="Instagram" class="instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://facebook.com/zonafit.25" target="_blank" aria-label="Facebook" class="facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://linkedin.com/in/gaston-coria-03ba3b190" target="_blank" aria-label="LinkedIn" class="linkedin">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </div>
-
-        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.6;">
-            © 2025 ZonaFit. Todos los derechos reservados.
-        </p>
     </footer>
 
-    <!-- Botón flotante de WhatsApp con API -->
-    <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20tus%20servicios%20de%20desarrollo%20web%20para%20fitness" >
-        <div class="whatsapp-icon">
-            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.6;"> Hablame para ayudarte </p>
-        </div>
-        <div class="whatsapp-float" 
-       target="_blank" 
-       aria-label="WhatsApp">
+    <!-- ===== WHATSAPP FLOTANTE ===== -->
+    <a href="https://api.whatsapp.com/send?phone=5491164246726&text=Hola%20Gaston!%20Vi%20tu%20web%20y%20quiero%20saber%20m%C3%A1s%20sobre%20tus%20servicios%20para%20gimnasios."
+        target="_blank" class="whatsapp-float" id="whatsapp-float" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¡Escribime, no muerde! 🤙</span>
     </a>
 
-    <!-- JavaScript externo -->
+    <!-- ===== TOAST DE ÉXITO ===== -->
+    <div class="toast" id="toast" role="alert" aria-live="polite">
+        <i class="fas fa-check-circle"></i>
+        <span>¡Mandado! Te respondo al toque 💪</span>
+    </div>
+
     <script src="./js/script.js"></script>
+    <script>
+        // Splash Screen
+        (function () {
+            const splash = document.getElementById('splashScreen');
+            const bar = document.querySelector('.splash-bar div');
+
+            // Animate loading bar
+            let w = 0;
+            const fill = setInterval(() => {
+                w = Math.min(w + Math.random() * 18, 100);
+                bar.style.width = w + '%';
+                if (w >= 100) clearInterval(fill);
+            }, 90);
+
+            // Hide splash after ~2.2s
+            setTimeout(() => {
+                splash.classList.add('splash-hidden');
+                setTimeout(() => splash.remove(), 700);
+            }, 2200);
+        })();
+    </script>
 </body>
+
 </html>
